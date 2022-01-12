@@ -1,7 +1,7 @@
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ArticlePage from "./pages/Article";
+import ArticlePage from "./pages/ArticlePage";
 import ArticleList from "./pages/ArticlesList";
 import { BrowserRouter } from "react-router-dom";
 import NavBar from "./NavBar";
@@ -16,8 +16,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/article" component={ArticlePage} />
-            <Route exact path="/article-list/:name" component={ArticleList} />
+            <Route exact path="/article/:name" component={ArticlePage} />
+            <Route exact path="/article-list" component={ArticleList} />
           </Switch>
         </div>
       </div>

@@ -5,6 +5,7 @@ import ArticlePage from "./pages/ArticlePage";
 import ArticleListPage from "./pages/ArticlesListPage";
 import { BrowserRouter } from "react-router-dom";
 import NavBar from "./NavBar";
+import NotFoundPage from "./pages/NotFoundPage";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/article/:name" component={ArticlePage} />
             <Route exact path="/article-list" component={ArticleListPage} />
+            <Route component={NotFoundPage}/>
           </Switch>
         </div>
       </div>
